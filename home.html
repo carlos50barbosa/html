@@ -13,6 +13,255 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
+<style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #6c9baf;
+    box-shadow: 0px 3px 10px #595959;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #222222;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.login-button button {    
+    border: none;
+    background-color: #092452;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.login-button button:hover {
+    background-color: #b3b3b3;
+    cursor: pointer;
+    box-shadow: 1px 1px 20px #73bbff;
+    
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width:730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* SLIDES */
+
+.slider-container {
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    flex: 1;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-btn1,
+.slider-btn2 {
+    cursor: pointer;
+    background-color: #092452;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 8px 16px;
+    border: 1px solid #68b9ef;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn1:hover,
+.slider-btn2:hover {
+    background-color: #b3b3b3;
+    box-shadow: 1px 1px 15px #73bbff;
+}
+/* FIM SLIDES */
+
+.bt_proximo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.bt_proximo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    
+}
+
+#pg_produtos {    
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    align-items: center;
+    background-color: #092452;
+    border: 1px solid #68b9ef;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#pg_produtos:hover {
+    background-color: #b3b3b3;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 1px 1px 20px #73bbff;
+}
+
+footer {
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    margin-top: 15%;
+    text-align: center;
+    background-color: #000000;
+}
+
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #dadada;
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+body {
+    font-family: "Nunito";
+    background-color: rgb(234, 234, 234);
+}
+</style>
+
 <body>
 
     <header>
@@ -36,7 +285,7 @@
             </div>
 
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="../img/menu_white.svg" alt=""></button>
+                <button onclick="menuShow()"><img class="icon" src="menu_white.svg" alt=""></button>
             </div>
         </nav>
 
@@ -97,22 +346,22 @@
     <div class="slider-container">
         <div class="slider-content">
             <div class="slide">
-                <img src="../img/slider/sl1.jpg" alt="Primeira Imagem">
+                <img src="../projeto-v/img/slider/sl1.jpg" alt="Primeira Imagem">
             </div>
             <div class="slide">
-                <img src="../img/slider/sl2.jpg" alt="Segunda Imagem">
+                <img src="../projeto-v/img/slider/sl2.jpg" alt="Segunda Imagem">
             </div>
             <div class="slide">
-                <img src="../img/slider/sl3.jpg" alt="Terceira Imagem">
+                <img src="../projeto-v/img/slider/sl3.jpg" alt="Terceira Imagem">
             </div>
             <div class="slide">
-                <img src="../img/slider/sl4.jpg" alt="Quarta Imagem">
+                <img src="../projeto-v/img/slider/sl4.jpg" alt="Quarta Imagem">
             </div>
             <div class="slide">
-                <img src="../img/slider/sl5.jpg" alt="Quinta Imagem">
+                <img src="../projeto-v/img/slider/sl5.jpg" alt="Quinta Imagem">
             </div>
             <div class="slide">
-                <img src="../img/slider/sl6.jpg" alt="Sexta Imagem">
+                <img src="../projeto-v/img/slider/sl6.jpg" alt="Sexta Imagem">
             </div>
         </div>
         <nav class="nav-btn">
