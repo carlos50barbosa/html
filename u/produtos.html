@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Sobre</title>
+    <title>Trabalho Ivan</title>
     <meta nome="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
 }
 
 header {
-    background-color: #6c9baf;
+    background-color: rgb(108, 155, 175);
     box-shadow: 0px 3px 10px #595959;
 }
 
@@ -64,24 +64,21 @@ header {
 }
 
 .nav-link:hover {
-    background-color: #000000;
+    background-color: #118eed;
     color: #ffffff;
     cursor: pointer;
 }
 
-.login-button button {    
+.login-button button {
     border: none;
-    background-color: #092452;
+    background-color: #118eed;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: 0.5s;
 }
 
 .login-button button:hover {
-    background-color: #b3b3b3;
+    background-color: #595959;
     cursor: pointer;
-    box-shadow: 1px 1px 20px #73bbff;
-    
 }
 
 .login-button button a {
@@ -148,43 +145,87 @@ header {
     flex-wrap: wrap;
 }
 
-
-body {
-    font-family: "Nunito";
-    background-color: rgb(234, 234, 234);
-}
-
-.container {
-    max-width: 400px;
-    margin: 100px auto;
-    background-color: #fff;
-    border-radius: 5px;
+.card {
+    border-radius: 10px;
+    box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: calc(100% - 20px);
+    max-width: 300px;
+    height: auto;
+    transition: all 0.3s ease-out;
+    align-content: center;
+    text-align-last: center;
+
 }
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
+
+.card1 {
+    background-color: rgb(53, 134, 119);
 }
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
+
+.card2 {
+    background-color: rgb(17, 75, 167);
+
 }
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007bff;
-    color: #fff;
+
+.card3 {
+    background-color: rgb(66, 129, 224);
+
+}
+
+.card4 {
+    background-color: rgb(102, 81, 173);
+
+}
+
+.card5 {
+    background-color: rgb(53, 119, 134);
+
+}
+
+.card:hover {
+    transform: translateY(-7px);
     cursor: pointer;
 }
-input[type="submit"]:hover {
-    background-color: #0056b3;
+
+
+.card h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.card p {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+}
+
+.card strong {
+    color: #f7b354;
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+.card button {
+    background-color: rgb(255, 102, 0);
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.card button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card button:hover {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 footer {
@@ -198,7 +239,6 @@ footer {
     background-color: #000000;
 }
 
-
 #footer_copyright {
     display: flex;
     justify-content: center;
@@ -209,12 +249,13 @@ footer {
     font-weight: 100;
 }
 
-
-
+body {
+    font-family: "Nunito";
+    background-color: rgb(234, 234, 234);
+}
 </style>
 
 <body>
-
     <header>
         <nav class="nav-bar">
             <div class="logo">
@@ -232,7 +273,7 @@ footer {
             </div>
 
             <div class="login-button">
-                <button><a href="index.html">Login</a></button>
+                <button><a href="../index.html">Login</a></button>
             </div>
 
             <div class="mobile-menu-icon">
@@ -249,34 +290,70 @@ footer {
             </ul>
 
             <div class="login-button">
-                <button><a href="index.html">Login</a></button>
+                <button><a href="../index.html">Login</a></button>
             </div>
         </div>
     </header>
-<!-- Início do texto -->
-    <br></br>
-    <br></br>
-   
-    <h1 style="text-align: center;"> Explorando a Integração de Conhecimentos em Computação em Nuvem: Um Estudo de Caso no Desenvolvimento de Sistemas </h1>
-  
-    <br></br>
-    <br></br>
-
-    <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">Este projeto foi meticulosamente concebido para ser apresentado na disciplina de Projeto Integrado V - Desenvolvimento de Sistemas. O seu propósito primordial foi criar uma solução prática que pudesse ser entregue como um complemento tangível, ao mesmo tempo em que proporcionasse uma imersão no estudo dos serviços de computação em nuvem.</p>
-    <br></br>
-    <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">A estrutura e implementação deste trabalho foram cuidadosamente planejadas para refletir uma abordagem acadêmica e profissional. Além de se concentrar na aplicação prática dos conceitos aprendidos durante o curso, o projeto também teve como objetivo aprofundar o entendimento sobre as nuances e aplicações práticas dos serviços oferecidos pela computação em nuvem.</p>
-    <br></br>
-    <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">Ao integrar conhecimentos teóricos com a prática de desenvolvimento de sistemas, este trabalho visa não apenas demonstrar habilidades técnicas, mas também evidenciar a capacidade de aplicar conceitos complexos em soluções viáveis e funcionais. O contexto acadêmico proporcionou um ambiente ideal para explorar a interseção entre teoria e aplicação, contribuindo assim para um aprendizado holístico e aprimoramento das competências profissionais necessárias na área de tecnologia da informação.</p>
-    <br></br>
-    <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%; "><b>Tecnologias usadas: HTML, CSS e JavaScript.</b></p>
 
     <br></br>
     <br></br>
-    <br></br>
-    <br></br>
-<!-- Fim do texto -->
 
-<!-- Início do rodapé -->
+    <section>
+        <div class="main">
+
+            <div class="card card1">
+                <h2>LOJA VIRTUAL UOL</h2>
+                <p>____________________</p>
+                <p>Monte sua loja virtual para vender muito mais na internet</p>
+                <p><strong>PLANOS APARTIR DE</strong></p>
+                <p>R$ <strong>29,90</strong> /mês</p>
+                <button><a href="pd_1.html">Saiba mais</a></button>
+            </div>
+
+            <div class="card card2">
+                <h2>CRIADOR DE SITES</h2>
+                <p>____________________</p>
+                <p>O sonho de criar seu site profissional em alguns cliques</p>
+                <p><strong>PLANOS APARTIR DE</strong></p>
+                <p>R$ <strong>9,90</strong> /mês</p>
+                <button><a href="pd_2.html">Saiba mais</a></button>
+            </div>
+
+            <div class="card card3">
+                <h2>CLOUD COMPUTING</h2>
+                <p>____________________</p>
+                <p>Customize soluções na nuvem para o alto volume de acessos</p>
+                <p><strong>PLANOS APARTIR DE</strong></p>
+                <p>R$ <strong>25,60</strong> /mês</p>
+                <button><a href="pd_3.html">Saiba mais</a></button>
+            </div>
+
+            <div class="card card4">
+                <h2>E-MAIL PROFISSIONAL</h2>
+                <p>____________________</p>
+                <p>Crie um e-mail corporativo com o nome da sua empresat</p>
+                <p><strong>PLANOS APARTIR DE</strong></p>
+                <p>R$ <strong>6,66</strong> /mês</p>
+                <button><a href="pd_4.html">Saiba mais</a></button>
+            </div>
+
+            <div class="card card5">
+                <h2>HOSPEDAGEM DE SITES</h2>
+                <p>____________________</p>
+                <p>Hospede seu site com a segurança e estabilidade do UOL</p>
+                <p><strong>PLANOS APARTIR DE</strong></p>
+                <p>R$ <strong>11,99</strong> /mês</p>
+                <button><a href="pd_5.html">Saiba mais</a></button>
+            </div>
+
+        </div>
+    </section>
+
+    <br></br>
+    <br></br>
+    <br></br>
+
+    <!-- Início do rodapé -->
     <footer>
         <p id="footer_content"></p>
         <br></br>
@@ -286,11 +363,12 @@ footer {
         <br></br>
         <div id="footer_copyright">
             &#169
-            2024 - TODOS OS DIREITOS RESERVADOS
+            TODOS OS DIREITOS RESERVADOS
         </div>
     </footer>
 <!-- Fim do rodapé -->
 
-<script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
+
 </html>
