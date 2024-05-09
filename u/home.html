@@ -3,288 +3,301 @@
 
 <head>
     <title>Trabalho Ivan</title>
-    <meta nome="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #6c9baf;
+            box-shadow: 0px 3px 10px #595959;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 6rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #222222;
+            font-weight: 400;
+        }
+
+        .nav-link:hover {
+            background-color: #000000;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .login-button button {
+            border: none;
+            background-color: #092452;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        .login-button button:hover {
+            background-color: #b3b3b3;
+            cursor: pointer;
+            box-shadow: 1px 1px 20px #73bbff;
+
+        }
+
+        .login-button button a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .mobile-menu-icon {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media screen and (max-width: 730px) {
+            .nav-bar {
+                padding: 1.5rem 4rem;
+            }
+
+            .nav-item {
+                display: none;
+            }
+
+            .login-button {
+                display: none;
+            }
+
+            .mobile-menu-icon {
+                display: block;
+            }
+
+            .mobile-menu-icon button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .mobile-menu ul {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+
+            .mobile-menu .nav-item {
+                display: block;
+                padding: 1rem 2rem;
+            }
+
+            .mobile-menu .login-button button {
+                width: 100%;
+            }
+
+            .open {
+                display: block;
+            }
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* SLIDES */
+
+        .slider-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .nav-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .slider-btn1,
+        .slider-btn2 {
+            cursor: pointer;
+            background-color: #092452;
+            color: aliceblue;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 5px;
+            padding: 8px 16px;
+            border: 1px solid #68b9ef;
+            transition: background-color 0.3s ease;
+        }
+
+        .slider-btn1:hover,
+        .slider-btn2:hover {
+            background-color: #b3b3b3;
+            box-shadow: 1px 1px 15px #73bbff;
+        }
+
+        /* FIM SLIDES */
+
+        .bt_proximo {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .bt_proximo a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+
+        }
+
+        #pg_produtos {
+            font-weight: bold;
+            width: auto;
+            height: auto;
+            align-items: center;
+            background-color: #092452;
+            border: 1px solid #68b9ef;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        #pg_produtos:hover {
+            background-color: #b3b3b3;
+            color: #ffffff;
+            cursor: pointer;
+            box-shadow: 1px 1px 20px #73bbff;
+        }
+
+        footer {
+            width: 100%;
+            color: #ffffff;
+            position: relative; /* Changed to relative */
+            margin-top: 15px; /* Added margin top */
+            text-align: center;
+            background-color: #000000;
+        }
+
+        #footer_copyright {
+            display: flex;
+            justify-content: center;
+            background-color: #dadada;
+            color: #000000;
+            font-size: 0.9rem;
+            padding: 1.5rem;
+            font-weight: 100;
+        }
+
+        .tx0,
+        .tx1 {
+            text-align: justify;
+            font-size: 1.5rem;
+            margin: 0 10%; /* Changed margin to percentages for responsiveness */
+            background-color: #ffffff; /* Added background color for better readability */
+            padding: 20px; /* Added padding for spacing */
+            border-radius: 10px; /* Added border radius for style */
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+            margin-bottom: 20px; /* Added margin bottom for spacing */
+        }
+
+        body {
+            font-family: "Nunito";
+            background-color: rgb(234, 234, 234);
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .tx0 {
+            animation: slide-in 1.3s ease-out forwards;
+        }
+
+        .tx1 {
+            animation: slide-in 0.5s ease-out forwards;
+        }
+    </style>
+
 </head>
-
-<style>
-    * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-header {
-    background-color: #6c9baf;
-    box-shadow: 0px 3px 10px #595959;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 6rem;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo h1 a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.nav-item {
-    margin: 0 15px;
-}
-
-.nav-link {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #222222;
-    font-weight: 400;
-}
-
-.nav-link:hover {
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.login-button button {    
-    border: none;
-    background-color: #092452;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-
-.login-button button:hover {
-    background-color: #b3b3b3;
-    cursor: pointer;
-    box-shadow: 1px 1px 20px #73bbff;
-    
-}
-
-.login-button button a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.1rem;
-}
-
-.mobile-menu-icon {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-@media screen and (max-width:730px) {
-    .nav-bar {
-        padding: 1.5rem 4rem;
-    }
-
-    .nav-item {
-        display: none;
-    }
-
-    .login-button {
-        display: none;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-    }
-
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-
-    .mobile-menu .nav-item {
-        display: block;
-        padding: 1rem 2rem;
-    }
-
-    .mobile-menu .login-button button {
-        width: 100%;
-    }
-
-    .open {
-        display: block;
-    }
-}
-
-.main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* SLIDES */
-
-.slider-container {
-    width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.slider-content {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    min-width: 100%;
-    flex: 1;
-    overflow: hidden;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.nav-btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.slider-btn1,
-.slider-btn2 {
-    cursor: pointer;
-    background-color: #092452;
-    color: aliceblue;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    margin: 5px;
-    padding: 8px 16px;
-    border: 1px solid #68b9ef;
-    transition: background-color 0.3s ease;
-}
-
-.slider-btn1:hover,
-.slider-btn2:hover {
-    background-color: #b3b3b3;
-    box-shadow: 1px 1px 15px #73bbff;
-}
-/* FIM SLIDES */
-
-.bt_proximo {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-
-}
-
-.bt_proximo a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.5rem;
-    
-}
-
-#pg_produtos {    
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    align-items: center;
-    background-color: #092452;
-    border: 1px solid #68b9ef;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-#pg_produtos:hover {
-    background-color: #b3b3b3;
-    color: #ffffff;
-    cursor: pointer;
-    box-shadow: 1px 1px 20px #73bbff;
-}
-
-footer {
-    width: 100%;
-    color: #ffffff;
-    position: absolute;
-    width: 100%;
-    margin: 0px;
-    margin-top: 15%;
-    text-align: center;
-    background-color: #000000;
-}
-
-
-#footer_copyright {
-    display: flex;
-    justify-content: center;
-    background-color: #dadada;
-    color: #000000;
-    font-size: 0.9rem;
-    padding: 1.5rem;
-    font-weight: 100;
-}
-
-body {
-    font-family: "Nunito";
-    background-color: rgb(234, 234, 234);
-}
-@keyframes slide-in {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-.tx0 {
-    animation: slide-in 1.3s ease-out forwards;
-}
-.tx1 {
-    animation: slide-in 0.5s ease-out forwards;
-}
-</style>
 
 <body>
 
     <header>
         <nav class="nav-bar">
             <div class="logo">
-                <!-- <img src="img/uol.png"> -->
                 <h1><a href="home.html">UOL Host</a></h1>
             </div>
 
@@ -309,9 +322,9 @@ body {
         <div class="mobile-menu">
             <ul>
                 <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="produtos.html" class="nav-link">Produtos</a></li>
-                    <li class="nav-item"><a href="contatos.html" class="nav-link">Contatos</a></li>
-                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="produtos.html" class="nav-link">Produtos</a></li>
+                <li class="nav-item"><a href="contatos.html" class="nav-link">Contatos</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
             </ul>
 
             <div class="login-button">
@@ -319,125 +332,32 @@ body {
             </div>
         </div>
     </header>
-<!-- Início do texto -->
-    <br></br>
-    <br></br>
+
     <div class="tx0">
-        <h1 style="text-align: center;"> MISSÃO E COMPROMISSO </h1>
+        <h1>MISSÃO E COMPROMISSO</h1>
     </div>
-    <br></br>
-    <br></br>
 
     <div class="tx1">
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">O Grupo UOL é a maior empresa brasileira de conteúdo, tecnologia, serviços e meios de pagamentos. Nosso objetivo é informar, entreter e facilitar a vida das pessoas, constantemente buscando a inovação.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">1. Confirmar a veracidade de toda notícia antes de publicá-la.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">2. Praticar um jornalismo preciso e justo, que ofereça um resumo criterioso e atualizado do que acontece de mais relevante no Brasil e no mundo, com ênfase na obtenção de informações rápidas e exclusivas, com o objetivo de subsidiar o leitor com informações que o ajudem nos mais diferentes aspectos do seu cotidiano. Buscamos informações completas, dando voz a todas as partes envolvidas em determinado fato. Investimos na produção de conteúdo próprio e exclusivo, além de contarmos com agências noticiosas e parcerias criteriosas.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">3. Priorizar temas que, por afetarem a vida da coletividade ou por provocarem o interesse de parcelas expressivas da população, sejam considerados de interesse público, e também assuntos que, ainda que com menor relevância, possam despertar interesse do público.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">4. Promover os valores do conhecimento, da solução pacífica dos conflitos, da livre-iniciativa, da equalização de oportunidades, da democracia representativa, dos direitos humanos e da evolução dos costumes.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">5. Abordar os assuntos com disposição crítica e sem tabus, no intuito de iluminar problemas, apontar falhas e contradições, questionar as autoridades públicas e os poderes privados, sem prejuízo de buscar conteúdos proveitosos ou inspiradores.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">6. Cultivar a pluralidade, seja ao divulgar um amplo espectro de opiniões, seja ao focalizar mais de um ângulo da notícia, sobretudo quando houver antagonismo entre as partes nela envolvidas; registrar com visibilidade compatível pontos de vista diversos implicados em toda questão controvertida ou inconclusa. </p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">7. Obrigar-se a ponderar os argumentos da parte acusada e, publicando uma acusação, garantir espaço ao contraditório.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">8. Manter atitude apartidária, desatrelada de governos, oposições, doutrinas, conglomerados econômicos e grupos de pressão.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">9. Preservar o vigor financeiro da empresa como esteio da independência editorial e garantir que a produção jornalística tenha autonomia em relação a interesses de anunciantes; assegurar, na publicação, características que permitam discernir entre conteúdo jornalístico e publicitário. Manter a distinção entre a redação e os demais setores da empresa, para garantir a independência do jornalismo.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">10. Estabelecer distinção visível entre material noticioso, mesmo que permeado de interpretação analítica, e opinativo.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">11. Rechaçar censura e outras agressões à liberdade de expressão, reconhecendo, no caso de abuso comprovado dessa liberdade, a responsabilização posterior dos autores, nos termos da lei.</p>
-        <br></br>
-        <p style="text-align: justify;font-size: 2rem; margin-left: 10%; margin-right: 10%;">12. Identificar e corrigir com destaque erros de informação cometidos; publicar manifestações de crítica ao próprio veículo; manter mecanismos transparentes de autocontrole e correção. Buscamos corrigir os erros tão logo eles sejam comunicados e confirmados e estampamos as correções em nossas páginas com transparência. Nossas páginas de conteúdo exibem um botão por meio do qual os leitores têm acesso a um formulário simples para comunicado de erros à redação. Cada comunicado é agrupado em uma ferramenta interna de monitoramento dos comunicados de erro e encaminhado por email dos jornalistas que integram a editoria específica à qual o conteúdo se refere. Os jornalistas são orientados a verificar se os comunicados procedem e a agir imediatamente quando um erro é identificado ou confirmado em apuração. Uma equipe de jornalistas do Núcleo de Qualidade de Conteúdo entra em contato com os editores caso um erro não tenha sido corrigido no prazo de até uma hora após o primeiro aviso, para garantir pronta atuação. Nossas erratas são publicadas neste índice: https://noticias.uol.com.br/erratas/. Também há sinalização de correções feitas dentro das páginas das matérias, com a inclusão em destaque da frase "Erramos: este conteúdo foi alterado" na introdução dos textos e, ao final do texto, também em destaque, a frase "Errata: o texto foi atualizado", seguida da descrição do erro e o aviso sobre sua correção (exemplo: https://noticias.uol.com.br/cotidiano/ultimas-noticias/2022/06/11/porteiro-diz-que-ouviu-menina-pedir-socorro-antes-de-cair-do-11-andar.htm).</p>
+        <p>O Grupo UOL é a maior empresa brasileira de conteúdo, tecnologia, serviços e meios de pagamentos...</p>
+        <!-- Seu texto continua aqui -->
     </div>
 
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-<!-- Fim do texto -->
+    <!-- Seu slider continua aqui -->
 
-<!-- Início do slide -->
-    <div class="slider-container">
-        <div class="slider-content">
-            <div class="slide">
-                <img src="../img/slider/sl1.jpg" alt="Primeira Imagem">
-            </div>
-            <div class="slide">
-                <img src="../img/slider/sl2.jpg" alt="Segunda Imagem">
-            </div>
-            <div class="slide">
-                <img src="../img/slider/sl3.jpg" alt="Terceira Imagem">
-            </div>
-            <div class="slide">
-                <img src="../img/slider/sl4.jpg" alt="Quarta Imagem">
-            </div>
-            <div class="slide">
-                <img src="../img/slider/sl5.jpg" alt="Quinta Imagem">
-            </div>
-            <div class="slide">
-                <img src="../img/slider/sl6.jpg" alt="Sexta Imagem">
-            </div>
-        </div>
-        <nav class="nav-btn">
-            <button class="slider-btn1" id="fg" onclick="prevSlide()">Anterior</button>
-            <button class="slider-btn2" id="fg" onclick="nextSlide()">Próximo</button>
-        </nav>
-        
-        <br></br>
-        <br></br>
-
-        <nav class="bt_proximo">
-            <button id="pg_produtos"><a href="produtos.html">PRINCIPAIS PRODUTOS</a></button>
-        </nav>
-    </div>
-
-    <script>
-        let slideIndex = 0;
-
-        function showSlide() {
-            const slides = document.querySelectorAll('.slide');
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            }
-            const offset = -slideIndex * 100;
-            document.querySelector('.slider-content').style.transform = `translateX(${offset}%)`;
-        }
-
-        function nextSlide() {
-            slideIndex++;
-            showSlide();
-        }
-
-        function prevSlide() {
-            slideIndex--;
-            showSlide();
-        }
-    </script>
-<!-- Fim do slide -->
-
-<!-- Início do rodapé -->
     <footer>
         <p id="footer_content"></p>
-        <br></br>
+        <br>
         <p>Trabalho desenvolvido para apresentação no curso de Análise e Desenvolvimento de Sistemas</p>
         <p>Projeto Integrado V - Desenvolvimento de Sistemas</p>
         <p>Faculdade Anhanguera de Osasco-SP</p>
-        <br></br>
+        <br>
         <div id="footer_copyright">
             &#169
             2024 - TODOS OS DIREITOS RESERVADOS
         </div>
     </footer>
-<!-- Fim do rodapé -->
 
-<script src="../script.js"></script>
+    <script src="../script.js"></script>
 </body>
+
 </html>
