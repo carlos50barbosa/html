@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --blue:#092452;
+    --white:#fff;
+    --bluee:#68b9ef;
+    --orig:#6c9baf;
+    --black:#000;
+    
+}
+body{
+    color: var(--black);
+    background: var(--white);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #595959;
+    width: 100%;
+    background: var(--orig);
+    transition: all 0.5s;
+    position: auto;
+    z-index: 1000;
+}
+.imgLogin{
+    width: 30px;
+    height: 30px;
+}
+.imgLogin {
+    transition: transform 0.3s ease-in-out;
+}
+
+.imgLogin:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+.navigation .logo{
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.logo span{
+    color: var(--black);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--black);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.navigation ul li a:hover{
+    color: var(--white);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--black);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--white);
+}
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10%;
+}
+
+body {
+    font-family: "Nunito";
+    background-color: rgb(234, 234, 234);
+}
+.card-container {
+    display: flex; /* Define o contêiner como um flex container */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui os cards ao longo do contêiner */
+    margin-top: 20px; /* Adiciona um espaçamento superior de 20px */
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
+    padding: 20px;
+    margin: auto;
+    width: calc(100% - 20px);
+    max-width: 300px;
+    height: auto;
+    transition: all 0.3s ease-out;
+    align-content: center;
+    text-align: center; /* Mudança aqui para 'text-align' em vez de 'text-align-last' */
+    align-items: center;
+    
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    cursor: pointer;
+}
+
+/* Estilos para telas menores que 768px */
+@media only screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 50% da largura menos o espaçamento */
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media only screen and (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* 100% da largura menos o espaçamento */
+    }
+}
+/* Define a animação 'slide-in-fast' para Card1 */
+@keyframes slide-in-fast {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Define a animação 'slide-in-medium' */
+@keyframes slide-in-medium {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Define a animação 'slide-in-slow' */
+@keyframes slide-in-slow {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(0);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Define a animação 'slide-in-medium' */
+@keyframes slide-in-medium {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Define a animação 'slide-in-slow' */
+@keyframes slide-in-slow {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(0);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Aplica a animação 'slide-in-fast' à classe 'slide-in-fast' */
+.slide-in-fast {
+    animation-name: slide-in-fast;
+    animation-duration: 0.5s; /* Duração de 0.5 segundos */
+}
+/* Aplica a animação 'slide-in-slow' à classe 'slide-in-slow' */
+.slide-in-slow {
+    animation-name: slide-in-slow;
+    animation-duration: 1.5s; /* Duração de 1.5 segundos */
+}
+
+.card1 {
+    background-color: rgb(53, 134, 119);    
+}
+
+.card2 {
+    background-color: rgb(17, 75, 167);
+
+}
+
+.card3 {
+    background-color: rgb(66, 129, 224);
+
+}
+
+.card4 {
+    background-color: rgb(102, 81, 173);
+
+}
+
+.card5 {
+    background-color: rgb(53, 119, 134);
+
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    cursor: pointer;
+}
+
+
+.card h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.card p {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+}
+
+.card strong {
+    color: #f7b354;
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+.card button {
+    background-color: rgb(255, 102, 0);
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    
+}
+
+.card button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card button:hover {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    
+    /* Estilos para ocultar a classe .thumbnails-container ao clicar no menu */    
+    .thumbnails-hidden {
+        display: none;
+    }
+
+    /* Estilos para mostrar a classe .thumbnails-container ao clicar no menu */
+    .thumbnails-visible {
+        display: block;
+        /* Adicione outros estilos necessários aqui */
+    }
+
+
+
+}
+
+.ocultar-nav {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+footer {
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    margin-top: 100%;
+    text-align: center;
+    background-color: #000000;
+    padding: 0%;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #dadada;
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}

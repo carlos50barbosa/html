@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --blue:#092452;
+    --white:#fff;
+    --bluee:#68b9ef;
+    --orig:#6c9baf;
+    --black:#000;
+    
+}
+body{
+    color: var(--black);
+    background: var(--white);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #595959;
+    width: 100%;
+    background: var(--orig);
+    transition: all 0.5s;
+    position: fixed;
+}
+.imgLogin{
+    width: 30px;
+    height: 30px;
+}
+.imgLogin {
+    transition: transform 0.3s ease-in-out;
+}
+
+.imgLogin:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+.navigation .logo{
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.logo span{
+    color: var(--black);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--black);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--white);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--black);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--white);
+}
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10%;
+}
+
+body {
+    font-family: "Nunito";
+    background-color: rgb(234, 234, 234);
+}
+
+/* Início tela */
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul:hover+.thumbnail_CLCC {
+    display: block;
+    top: -4px; 
+    right: 0x;
+    top: -4px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* Fim tela */
+
+@media (max-width:785px) {
+
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+        .container {
+        display: block;
+        flex-direction: column;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    
+    .thumbnails-container {
+        display: none;
+    }
+    /* Estilos para ocultar a classe .thumbnails-container ao clicar no menu */
+    .thumbnails-hidden {
+        display: none;
+    }
+
+    /* Estilos para mostrar a classe .thumbnails-container ao clicar no menu */
+    .thumbnails-visible {
+        display: block;
+        /* Adicione outros estilos necessários aqui */
+    }
+    
+}
+
+/* Carlos IN */
+.thumbnails-container {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail1,
+.thumbnail2 {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container:hover .thumbnail1 {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+.thumbnails-container:hover .thumbnail2 {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 2 */
+    left: 210px; /* Distância da miniatura 2 */
+}
+
+/* Éverton */
+.thumbnails-container2 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+
+.thumbnail_EEN {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container2:hover .thumbnail_EEN {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* Gabriel Silva */
+.thumbnails-container3 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_GSC {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container3:hover .thumbnail_GSC {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* João */
+.thumbnails-container4 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_JRSMM {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container4:hover .thumbnail_JRSMM {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* Alexandre */
+.thumbnails-container5 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_AMTLS {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container5:hover .thumbnail_AMTLS {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* Mário */
+.thumbnails-container6 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_MHCS {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container6:hover .thumbnail_MHCS {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* Olympio */
+.thumbnails-container7 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_POCC {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container7:hover .thumbnail_POCC {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* Lucas */
+.thumbnails-container8 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_ULJSS {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container8:hover .thumbnail_ULJSS {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* Sebastiana */
+.thumbnails-container9 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_SERL {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container9:hover .thumbnail_SERL {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+/* Caio */
+.thumbnails-container10 {
+    position: relative; /* Para posicionar as miniaturas */
+    width: relative; /* Para ajustar a largura ao conteúdo */
+    height: 0%;
+}
+.thumbnail_CLCC {
+    display: none; /* Inicialmente ocultas */
+    position: absolute;
+    width: 30px; /* Largura da miniatura */
+    height: 30px; /* Altura ajustada automaticamente */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+.thumbnails-container10:hover .thumbnail_CLCC {
+    display: block; /* Exibe ao passar o mouse sobre .thumbnails-container */
+    top: -4px; /* Posição da miniatura 1 */
+    right: 0x;
+}
+
+
+
+
+footer {
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    margin-top: 15%;
+    text-align: center;
+    background-color: #000000;
+    padding: 0%;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #dadada;
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
