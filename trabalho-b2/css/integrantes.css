@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --blue:#092452;
+    --white:#fff;
+    --bluee:#68b9ef;
+    --orig:#6c9baf;
+    --black:#000;
+    --orange: #ffa500;    
+}
+body{
+    color: var(--black);
+    background: var(--white);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #595959;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.imgLogin{
+    width: 30px;
+    height: 30px;
+}
+.imgLogin {
+    transition: transform 0.3s ease-in-out;
+}
+
+.imgLogin:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+.navigation .logo{
+    color: var(--black);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--black);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.navigation ul li a:hover{
+    color: var(--white);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--orange);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--orange);
+}
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10%;
+}
+.container {
+    max-width: 465px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-in 1s ease-out forwards;
+    
+}
+
+.container a {
+    color: black;
+    /* Cor padrão do texto */
+    transition: color 0.3s ease;
+    /* Transição suave de cor */
+}
+
+.thumbnails-container a:hover {
+    color: var(--orange);
+    /* Cor do texto ao passar o mouse */
+}
+
+.thumbnails-container a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Usa a cor padrão do texto */
+    font-size: 1rem;
+}
+a{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+a:hover{
+    color: var(--orange);
+}
+@keyframes slide-in {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+  }
+
+  .container {
+    animation: slide-in 0.3s ease-out forwards;
+  }
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .thumbnails-container {
+        display: none;
+    }
+    /* Estilos para ocultar a classe .thumbnails-container ao clicar no menu */    
+    .thumbnails-hidden {
+        display: none;
+    }
+
+    /* Estilos para mostrar a classe .thumbnails-container ao clicar no menu */
+    .thumbnails-visible {
+        display: block;
+        /* Adicione outros estilos necessários aqui */
+    }
+
+}
+
+/* Carlos IN */
+.thumbnails-container {
+    position: relative;
+    width: relative; 
+    height: 0%;
+}
+.thumbnail1,
+.thumbnail2 {
+    display: none; 
+    position: absolute;
+    width: 30px; 
+    height: 30px; 
+    transition: opacity 0.3s ease; 
+}
+.thumbnails-container:hover .thumbnail1 {
+    display: block; 
+    top: -4px; 
+    right: 0x;
+}
+.thumbnails-container:hover .thumbnail2 {
+    display: block; 
+    top: -4px;
+    left: 410px;
+}
+
+/* Éverton */
+.thumbnails-container2 {
+    position: relative; 
+    width: relative; 
+    height: 0%;
+}
+.thumbnail_EEN {
+    display: none; 
+    position: absolute;
+    width: 30px;
+    height: 30px; 
+    transition: opacity 0.3s ease; 
+}
+.thumbnails-container2:hover .thumbnail_EEN {
+    display: block; 
+    top: -4px; 
+    right: 0x;
+}
+/* Thiago Zulli */
+.thumbnails-container3 {
+    position: relative; 
+    width: relative;
+    height: 0%;
+}
+.thumbnail_TZ {
+    display: none; 
+    position: absolute;
+    width: 30px;
+    height: 30px; 
+    transition: opacity 0.3s ease; 
+}
+.thumbnails-container3:hover .thumbnail_TZ {
+    display: block; 
+    top: -4px;
+    right: 0x;
+}
+
+/* João */
+.thumbnails-container4 {
+    position: relative; 
+    width: relative;
+    height: 0%;
+}
+.thumbnail_JRSMM {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px; 
+    transition: opacity 0.3s ease; 
+}
+.thumbnails-container4:hover .thumbnail_JRSMM {
+    display: block; 
+    top: -4px;
+    right: 0x;
+}
+.ocultar-nav {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+footer p {
+    font-size: 0.9rem;
+}
+footer {
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    margin-top: 20%;
+    text-align: center;
+    background-color: #000000;
+    padding: 0%;
+}
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #dadada;
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
