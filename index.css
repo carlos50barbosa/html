@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --blue:#092452;
+    --white:#fff;
+    --bluee:#68b9ef;
+    --black:#000;
+    --xxx: #00ffee;    
+}
+
+body{
+    color: var(--black);
+    background: var(--white);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #595959;
+    width: 100%;
+    background: var(--black);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+
+.navigation .logo{
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.logo span{
+    color: var(--xxx);
+    
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    
+}
+.navigation ul li a{
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--black);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--white);
+}
+
+
+body {
+    font-family: "Nunito";
+    background-color: rgb(234, 234, 234);
+}
+
+.h1 {
+    text-align: center;
+}
+
+.contatos {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contatos a:hover {
+    color: var(--bluee);
+}
+
+#voltar {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--black);
+}
+
+#voltar:hover {
+    color: var(--bluee);
+}

@@ -14,7 +14,8 @@
     --bluee:#68b9ef;
     --orig:#6c9baf;
     --black:#000;
-    
+    --cinza: #5c5c5c;
+    --orange: #ffa500;
 }
 body{
     color: var(--black);
@@ -27,36 +28,21 @@ body{
     padding: 18px 40px;
     box-shadow: 0 0.1rem 0.5rem #595959;
     width: 100%;
-    background: var(--orig);
+    background: var(--white);
     transition: all 0.5s;
     position: fixed;
-}
-.imgLogin{
-    width: 30px;
-    height: 30px;
-}
-.imgLogin {
-    transition: transform 0.3s ease-in-out;
-}
-
-.imgLogin:hover {
-    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    
 }
 .navigation .logo{
-    color: var(--white);
+    color: var(--black);
     font-size: 1.7rem;
     font-weight: 600;
     text-decoration: none;
-}
-.logo span{
-    color: var(--black);
-    
 }
 .navigation ul{
     display: flex;
     align-items: center;
     gap: 5rem;
-    
 }
 .navigation ul li a{
     color: var(--black);
@@ -64,9 +50,6 @@ body{
     font-weight: 500;
     transition: all 0.5s;
     text-decoration: none;
-}
-.navigation ul li a:hover{
-    color: var(--white);
 }
 .navigation i{
     cursor: pointer;
@@ -81,62 +64,49 @@ body{
     width: 28px;
     height: 3px;
     border-radius: 3px;
-    background: var(--black);
+    background: #ffa500;
     margin: 5px auto;
     transition: all 0.3s;
 }
 .menu .bar:nth-child(1),
 .menu .bar:nth-child(3){
-    background: var(--white);
+    background: var(--orange);
 }
 .home{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0px 10%;
 }
 
-body {
-    font-family: "Nunito";
-    background-color: rgb(234, 234, 234);
+.home .hom-text a{
+    margin-bottom: 6rem;
 }
 
-/* Início tela de login */
-.container {
-    max-width: 400px;
-    margin: 100px auto;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.text-p a{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.2rem;
 }
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-}
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-}
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-/* Fim tela de login */
+.text-p a:hover {
+    color: var(--orange);   
+  }
+@keyframes slide-in {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+  }
+  .text-h1 {
+    animation: slide-in 1s ease-out forwards;
+    font-size: 2em;
+  }
+  .text-p {
+    animation: slide-in 0.3s ease-out forwards;
+  }
+  .nav-menu li a:hover {
+    color: var(--orange);
+  }
 @media (max-width:785px) {
     .navigation{
         padding: 18px 20px;
@@ -162,33 +132,53 @@ input[type="submit"]:hover {
         flex-direction: column;
         background: var(--white);
         gap: -10px;
-        transition: 0.3s;
+        transition: 0.3s;        
     }
     .nav-menu.ativo{
-        right: 0;
+        right: 0;        
     }
     .nav-item{
         margin: 16px 0;
     }
+    /*main*/
+    .home .text-h1 {
+        text-align: center;
+    }
+    .home{
+        padding: 100px 5%;
+        flex-direction: column;
+        text-align: justify;
+        overflow: hidden;
+        gap: 5rem;
+    }    
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
 }
-
 .ocultar-nav {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
 }
-
+footer p {
+    font-size: 0.9rem;
+}
 footer {
-    width: 100%;
     color: #ffffff;
     position: absolute;
     width: 100%;
     margin: 0px;
-    margin-top: 15%;
+    margin-top: 23%;
     text-align: center;
     background-color: #000000;
     padding: 0%;
 }
-
 #footer_copyright {
     display: flex;
     justify-content: center;
@@ -199,3 +189,14 @@ footer {
     font-weight: 100;
 }
 
+#voltar {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--black);
+    text-decoration: none;
+}
+
+#voltar:hover {
+    color: var(--bluee);
+}

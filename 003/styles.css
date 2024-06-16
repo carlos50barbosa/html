@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+:root{
+    --blue:#092452;
+    --white:#fff;
+    --bluee:#68b9ef;
+    --black:#000;
+    --xxx: #00ffee;    
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#statusMessage {
+    text-align: center;
+    font-weight: bolder;
+}
+
+select, input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    border-radius: 4px;
+    width: 100px;
+    padding: 10px;    
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#voltar {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--black);
+    text-decoration: none;
+}
+
+#voltar:hover {
+    color: var(--bluee);
+}
