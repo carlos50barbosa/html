@@ -95,7 +95,7 @@ body {
     width: 350px;
 }
 
-a {
+.contatos a {
     text-decoration: none;
     color: var(--black);
 }
