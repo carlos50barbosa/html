@@ -83,3 +83,17 @@ pre {
 #voltar:hover {
     color: var(--bluee);
 }
+
+#b3 {
+    background-color: var(--blue);
+    width: 150px;
+    text-decoration: none;
+}
+button a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+#b3:hover {
+    background-color: var(--bluee);
+}
