@@ -199,3 +199,14 @@ footer {
     font-weight: 100;
 }
 
+#voltar {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--black);
+    text-decoration: none;
+}
+
+#voltar:hover {
+    color: var(--bluee);
+}

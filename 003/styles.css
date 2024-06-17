@@ -1,24 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
-:root{
-    --blue:#092452;
-    --white:#fff;
-    --bluee:#68b9ef;
-    --black:#000;
-    --xxx: #00ffee;    
+:root {
+    --blue: #092452;
+    --white: #fff;
+    --bluee: #68b9ef;
+    --black: #000;
+    --xxx: #00ffee;
+}
+
+body {
+    color: var(--black);
+    background: var(--white);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #595959;
+    width: 100%;
+    background: var(--black);
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px; /* Certifique-se de que a altura da navegação está definida */
+    z-index: 1000;
+}
+
+.navigation .logo {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--xxx);
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a {
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--black);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.nav-item a:hover {
+    color: var(--bluee);
 }
 
 .container {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 100px auto 0; /* Ajusta a margem superior conforme necessário */
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -50,13 +115,11 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-
     border-radius: 4px;
     width: 100px;
-    padding: 10px;    
+    padding: 10px;
     display: block;
     margin: 0 auto; /* Centraliza horizontalmente */
-    
 }
 
 button:hover {
@@ -75,10 +138,14 @@ pre {
 #voltar {
     font-size: 16px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     color: var(--black);
     text-decoration: none;
+    margin-top: 80px;
+    margin-left: 20px;
+    display: block;
 }
+
 
 #voltar:hover {
     color: var(--bluee);
@@ -89,7 +156,8 @@ pre {
     width: 150px;
     text-decoration: none;
 }
-button a{
+
+button a {
     text-decoration: none;
     color: var(--white);
 }

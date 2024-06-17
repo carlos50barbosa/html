@@ -106,15 +106,19 @@ p {
     text-align: center;
 }
 
-.contatos a:hover {
+.nav-item a:hover {
     color: var(--bluee);
 }
 
 #voltar {
     font-size: 16px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     color: var(--black);
+    text-decoration: none;
+    margin-top: 50px;
+    margin-left: 20px;
+    display: block;
 }
 
 #voltar:hover {
